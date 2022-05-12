@@ -28,6 +28,8 @@ public class LoginPage {
 
 	public void loginToApp() {
 		driver.get("https://demo.nopcommerce.com/login?returnUrl=%2F");
+		System.out.println(driver.getCurrentUrl());
+		System.out.println(driver.getTitle());
 		txtEmail.sendKeys("bash1234@gmail.com");
 		txtPassword.sendKeys("123456");
 		btnLogIn.click();
