@@ -24,7 +24,7 @@ public class BaseTest {
 		case "chrome":
 		case "gc":
 			WebDriverManager.chromiumdriver().setup();
-			System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
+			//System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("–no-sandbox");
 			options.addArguments("–disable-dev-shm-usage");
