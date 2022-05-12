@@ -23,4 +23,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven Automation
-      run: mvn clean test -DsuiteXmlFile=regression.xml -DbrowserType=ff
+      run: mvn clean test -DsuiteXmlFile=regression.xml -DbrowserType=chrome
