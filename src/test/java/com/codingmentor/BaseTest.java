@@ -33,7 +33,6 @@ public class BaseTest {
 			chromeOptions.addArguments("--disable-gpu") ;
 			chromeOptions.addArguments("start-maximized") ;
 			chromeOptions.addArguments("disable-infobars");
-			chromeOptions.addArguments("--headless");
 			driver = new ChromeDriver(chromeOptions);
 			break;
 		case "iexplorer":
