@@ -25,14 +25,9 @@ public class BaseTest {
 		case "gc":
 			WebDriverManager.chromiumdriver().setup();
 			ChromeOptions chromeOptions = new ChromeOptions();
-			chromeOptions.addArguments("--no-sandbox") ;
-			chromeOptions.addArguments("--disable-setuid-sandbox") ;
-			chromeOptions.addArguments("--remote-debugging-port=9222") ;
-			chromeOptions.addArguments("--disable-dev-shm-using") ;
-			chromeOptions.addArguments("--disable-extensions") ;
-			chromeOptions.addArguments("--disable-gpu") ;
-			chromeOptions.addArguments("start-maximized") ;
-			chromeOptions.addArguments("disable-infobars");
+			chromeOptions.addArguments("--no-sandbox");
+			chromeOptions.addArguments("--disable-dev-shm-usage");
+			chromeOptions.addArguments("--headless");
 			driver = new ChromeDriver(chromeOptions);
 			break;
 		case "iexplorer":
