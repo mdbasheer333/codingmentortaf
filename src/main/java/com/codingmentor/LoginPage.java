@@ -38,9 +38,9 @@ public class LoginPage {
 	}
 
 	public void logoutApp() {
-		WebDriverWait wait=new WebDriverWait(driver, 20);
-		wait.until(ExpectedConditions.visibilityOf(lnkLogout));
-		lnkLogout.click();
+		//WebDriverWait wait=new WebDriverWait(driver, 20);
+		//wait.until(ExpectedConditions.visibilityOf(lnkLogout));
+		//lnkLogout.click();
 	}
 
 }
