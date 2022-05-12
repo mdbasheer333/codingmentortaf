@@ -25,7 +25,9 @@ public class BaseTest {
 		case "gc":
 			WebDriverManager.chromiumdriver().setup();
 			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--no-sandbox");
 			options.setExperimentalOption("useAutomationExtension", false);
+	        options.addArguments("--disable-dev-shm-usage");
 			driver = new ChromeDriver();
 			break;
 		case "iexplorer":
