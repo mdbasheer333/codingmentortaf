@@ -6,32 +6,27 @@
 	<parameter name="browserType" value="chrome" />
 
 	<test name="RegressionTest1">
-
 		<classes>
 			<class name="com.codingmentor.usertests.LoginTest" />
 		</classes>
-	</test> <!-- RegressionTest -->
+	</test>
 
-	<test name="RegressionTest2">
-
+	<!-- <test name="RegressionTest2">
 		<classes>
 			<class name="com.codingmentor.usertests.LoginTest2" />
 		</classes>
-	</test> <!-- RegressionTest -->
+	</test>
 
 	<test name="RegressionTest3">
-
 		<classes>
 			<class name="com.codingmentor.usertests.LoginTest3" />
 		</classes>
-	</test> <!-- RegressionTest -->
-
+	</test>
 
 	<test name="RegressionTest4">
-
 		<classes>
 			<class name="com.codingmentor.usertests.LoginTest4" />
 		</classes>
-	</test> <!-- RegressionTest -->
+	</test> -->
 
-</suite> <!-- RegressionSuite -->
+</suite> 
