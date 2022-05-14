@@ -96,7 +96,7 @@
 					<configuration>
 						<suiteXmlFiles>
 							<suiteXmlFile>
-								${basedir}/${suiteXmlFile}
+								${basedir}/src/test/resources/${suiteXmlFile}
 							</suiteXmlFile>
 
 						</suiteXmlFiles>
