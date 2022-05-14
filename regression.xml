@@ -11,7 +11,7 @@
 		</classes>
 	</test>
 
-	<!-- <test name="RegressionTest2">
+	<test name="RegressionTest2">
 		<classes>
 			<class name="com.codingmentor.usertests.LoginTest2" />
 		</classes>
@@ -27,6 +27,6 @@
 		<classes>
 			<class name="com.codingmentor.usertests.LoginTest4" />
 		</classes>
-	</test> -->
+	</test> 
 
 </suite> 
