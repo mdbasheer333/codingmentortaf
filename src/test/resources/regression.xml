@@ -7,7 +7,7 @@
 
 	<test name="RegressionTest1">
 		<classes>
-			<class name="com.codingmentor.usertests.LoginTest" />
+			<class name="com.codingmentor.usertests.LoginTest1" />
 		</classes>
 	</test>
 

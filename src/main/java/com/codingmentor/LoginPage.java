@@ -2,8 +2,10 @@ package com.codingmentor;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.Annotations;
 
 public class LoginPage {
 
@@ -20,6 +22,9 @@ public class LoginPage {
 
 	@FindBy(linkText = "Log out")
 	private WebElement lnkLogout;
+	
+	@FindBy(xpath = "//div[@id='gender']/descendant::label[text()='%gender%']")
+	private WebElement rdBtnGender;
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -34,11 +39,27 @@ public class LoginPage {
 		txtPassword.sendKeys("123456");
 		btnLogIn.click();
 	}
-
+	
+	public void gotoRegPage() throws InterruptedException {
+		driver.get("https://demo.nopcommerce.com/register?returnUrl=%2F");
+		System.out.println(driver.getCurrentUrl());
+		System.out.println(driver.getTitle());
+		this.rdBtnGender.getClass().asSubclass(RemoteWebElement.class).getDeclaredAnnotation(FindBy.class).xpath().replace("%gender%", "Female");
+		
+		//rdBtnGender.getClass().getDeclaredAnnotation(FindBy.class).xpath().replace("%gender%", "Female");
+		rdBtnGender.click();
+		Thread.sleep(5000);
+		rdBtnGender.getClass().getDeclaredAnnotation(FindBy.class).xpath().replace("%gender%", "Male");
+		rdBtnGender.click();
+		Thread.sleep(5000);
+	}
+	
 	public void logoutApp() {
 		//WebDriverWait wait=new WebDriverWait(driver, 20);
 		//wait.until(ExpectedConditions.visibilityOf(lnkLogout));
 		//lnkLogout.click();
 	}
+	
+	
 
 }

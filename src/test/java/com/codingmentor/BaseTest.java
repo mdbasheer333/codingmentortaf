@@ -27,8 +27,9 @@ public class BaseTest {
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("--no-sandbox");
 			chromeOptions.addArguments("--disable-dev-shm-usage");
+			
 			//this is for github actions
-			chromeOptions.addArguments("--headless");
+			//chromeOptions.addArguments("--headless");
 			driver = new ChromeDriver(chromeOptions);
 			break;
 		case "iexplorer":
